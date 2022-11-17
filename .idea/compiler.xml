@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="beforecheck" target="1.8" />
+      <module name="beforecheck1" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="beforecheck" options="-XDcompilePolicy=simple &quot;-Xplugin:ErrorProne -XepPatchChecks:ReturnValueIgnored,MissingCasesInEnumSwitch&#10;                            -XepPatchLocation:IN_PLACE&quot;" />
+      <module name="beforecheck1" options="-XDcompilePolicy=simple -Xplugin:ErrorProne" />
+      <module name="errorpronedemo" options="-XDcompilePolicy=simple &quot;-Xplugin:ErrorProne -XepPatchChecks:ReturnValueIgnored,MissingCasesInEnumSwitch&#10;                            -XepPatchLocation:IN_PLACE&quot;" />
+    </option>
+  </component>
+</project>
